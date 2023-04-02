@@ -9,8 +9,8 @@ const SingleStudent = (props) => {
 //Remove Student
 //Update Marks of student
 const handleDelete=async (e)=>{
-  console.log(props.id)
-  console.log(props.isChecked)
+  // console.log(props.id)
+  // console.log(props.isChecked)
   if(s_student.length>3)
         {
           await removestudent(props.id,props.mentorid);
@@ -23,14 +23,14 @@ const handleDelete=async (e)=>{
           props.setalerttype("danger")
         }
 }
-
+// console.log
 const handleEdit=async(e)=>{
   if(props.isChecked!="yes" && s_student.length>=3)
   {
-    console.log(IdeationMarks)
-    console.log(ExecutionMarks)
-    console.log(VivaMarks)
-    console.log(props.isChecked);
+    // console.log(IdeationMarks)
+    // console.log(ExecutionMarks)
+    // console.log(VivaMarks)
+    // console.log(props.isChecked);
     const json=await updateMarks(props.id,props.mentorid,IdeationMarks,ExecutionMarks,VivaMarks);
     if(json.message)
     {
@@ -49,15 +49,15 @@ const handleEdit=async(e)=>{
 }
 
 const handleOnChange1 = (event)=>{
-  console.log(event.target.value)
+  // console.log(event.target.value)
 setIdeationMarks(event.target.value)
 }
 const handleChange2=(event)=>{
-  console.log(event.target.value)
+  // console.log(event.target.value)
   setExecutionMarks(event.target.value)
   }
   const handleChange3=(event)=>{
-    console.log(event.target.value)
+    // console.log(event.target.value)
     setVivaMarks(event.target.value)
     }
 
